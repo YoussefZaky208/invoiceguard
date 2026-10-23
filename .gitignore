@@ -2,3 +2,4 @@
 venv/
 invoices*.db
 __pycache__/
+uploads/

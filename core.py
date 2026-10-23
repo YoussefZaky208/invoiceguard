@@ -20,6 +20,7 @@ load_dotenv()
 
 MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
 DB_PATH = os.getenv("INVOICE_DB", "invoices.db")
+UPLOAD_DIR = os.getenv("UPLOAD_DIR", "uploads")
 TOLERANCE = 0.05  # allowed rounding gap, in currency units
 
 
@@ -230,11 +231,27 @@ def save_invoice(invoice: Invoice, problems: list[str]) -> tuple[int, str]:
         db.close()
 
 
+EXTENSIONS = {"image/png": ".png", "image/jpeg": ".jpg", "application/pdf": ".pdf"}
+
+
+def stored_file_path(invoice_id: int) -> str | None:
+    """Where the original uploaded file for an invoice is kept, if it exists."""
+    for ext in EXTENSIONS.values():
+        path = os.path.join(UPLOAD_DIR, f"{invoice_id}{ext}")
+        if os.path.exists(path):
+            return path
+    return None
+
+
 def process_invoice(file_bytes: bytes, mime_type: str) -> dict:
-    """The full pipeline: read -> check -> store."""
+    """The full pipeline: read -> check -> store (data in the database, original file in UPLOAD_DIR)."""
     invoice = extract_invoice(file_bytes, mime_type)
     problems = validate_invoice(invoice)
     invoice_id, status = save_invoice(invoice, problems)
+    if status != "duplicate":
+        os.makedirs(UPLOAD_DIR, exist_ok=True)
+        with open(os.path.join(UPLOAD_DIR, f"{invoice_id}{EXTENSIONS.get(mime_type, '')}"), "wb") as f:
+            f.write(file_bytes)
     return {
         "id": invoice_id,
         "status": status,

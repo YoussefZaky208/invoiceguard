@@ -41,6 +41,8 @@ def upload_invoice(file: UploadFile = File(...)):
 
     try:
         return core.process_invoice(file_bytes, file.content_type)
+    except core.DailyQuotaExceeded as error:
+        raise HTTPException(429, str(error))
     except errors.APIError as error:
         raise HTTPException(503, f"The AI service is unavailable right now, please retry. ({error.code})")
 

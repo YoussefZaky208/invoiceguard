@@ -1,0 +1,652 @@
+[
+  {
+    "file": "01_clean.png",
+    "category": "clean",
+    "expected_status": "approved",
+    "description": "correct invoice",
+    "truth": {
+      "supplier": "Nile Office Supplies Co.",
+      "invoice_number": "INV-2026-0147",
+      "invoice_date": "2026-10-05",
+      "subtotal": 3335.0,
+      "tax": 466.9,
+      "total": 3801.9,
+      "line_items": [
+        {
+          "quantity": 4,
+          "unit_price": 250.0,
+          "amount": 1000.0
+        },
+        {
+          "quantity": 4,
+          "unit_price": 210.0,
+          "amount": 840.0
+        },
+        {
+          "quantity": 3,
+          "unit_price": 85.0,
+          "amount": 255.0
+        },
+        {
+          "quantity": 2,
+          "unit_price": 620.0,
+          "amount": 1240.0
+        }
+      ]
+    }
+  },
+  {
+    "file": "02_clean.png",
+    "category": "clean",
+    "expected_status": "approved",
+    "description": "correct invoice",
+    "truth": {
+      "supplier": "Delta Tech Solutions",
+      "invoice_number": "DTS-10442",
+      "invoice_date": "2026-09-28",
+      "subtotal": 10550.0,
+      "tax": 1477.0,
+      "total": 12027.0,
+      "line_items": [
+        {
+          "quantity": 1,
+          "unit_price": 1200.0,
+          "amount": 1200.0
+        },
+        {
+          "quantity": 1,
+          "unit_price": 450.0,
+          "amount": 450.0
+        },
+        {
+          "quantity": 1,
+          "unit_price": 8900.0,
+          "amount": 8900.0
+        }
+      ]
+    }
+  },
+  {
+    "file": "03_clean.png",
+    "category": "clean",
+    "expected_status": "approved",
+    "description": "correct invoice",
+    "truth": {
+      "supplier": "Alexandria Packaging Industries",
+      "invoice_number": "API/2026/0881",
+      "invoice_date": "2026-10-11",
+      "subtotal": 11460.0,
+      "tax": 1604.4,
+      "total": 13064.4,
+      "line_items": [
+        {
+          "quantity": 12,
+          "unit_price": 540.0,
+          "amount": 6480.0
+        },
+        {
+          "quantity": 2,
+          "unit_price": 1850.0,
+          "amount": 3700.0
+        },
+        {
+          "quantity": 4,
+          "unit_price": 320.0,
+          "amount": 1280.0
+        }
+      ]
+    }
+  },
+  {
+    "file": "04_clean.jpg",
+    "category": "clean",
+    "expected_status": "approved",
+    "description": "correct invoice",
+    "truth": {
+      "supplier": "Horus Printing House",
+      "invoice_number": "HPH-5521",
+      "invoice_date": "2026-10-02",
+      "subtotal": 12590.0,
+      "tax": 1762.6,
+      "total": 14352.6,
+      "line_items": [
+        {
+          "quantity": 3,
+          "unit_price": 1250.0,
+          "amount": 3750.0
+        },
+        {
+          "quantity": 8,
+          "unit_price": 380.0,
+          "amount": 3040.0
+        },
+        {
+          "quantity": 2,
+          "unit_price": 2900.0,
+          "amount": 5800.0
+        }
+      ]
+    }
+  },
+  {
+    "file": "05_clean.jpg",
+    "category": "clean",
+    "expected_status": "approved",
+    "description": "correct invoice",
+    "truth": {
+      "supplier": "Cairo IT Hardware",
+      "invoice_number": "CIT-2026-3307",
+      "invoice_date": "2026-10-14",
+      "subtotal": 121500.0,
+      "tax": 17010.0,
+      "total": 138510.0,
+      "line_items": [
+        {
+          "quantity": 2,
+          "unit_price": 450.0,
+          "amount": 900.0
+        },
+        {
+          "quantity": 2,
+          "unit_price": 42500.0,
+          "amount": 85000.0
+        },
+        {
+          "quantity": 2,
+          "unit_price": 3100.0,
+          "amount": 6200.0
+        },
+        {
+          "quantity": 3,
+          "unit_price": 9800.0,
+          "amount": 29400.0
+        }
+      ]
+    }
+  },
+  {
+    "file": "06_clean.pdf",
+    "category": "clean",
+    "expected_status": "approved",
+    "description": "correct invoice",
+    "truth": {
+      "supplier": "Lotus Catering",
+      "invoice_number": "LC-0917",
+      "invoice_date": "2026-10-08",
+      "subtotal": 2935.0,
+      "tax": 410.9,
+      "total": 3345.9,
+      "line_items": [
+        {
+          "quantity": 2,
+          "unit_price": 120.0,
+          "amount": 240.0
+        },
+        {
+          "quantity": 12,
+          "unit_price": 185.0,
+          "amount": 2220.0
+        },
+        {
+          "quantity": 5,
+          "unit_price": 95.0,
+          "amount": 475.0
+        }
+      ]
+    }
+  },
+  {
+    "file": "07_clean.jpg",
+    "category": "clean",
+    "expected_status": "approved",
+    "description": "correct invoice",
+    "truth": {
+      "supplier": "Aswan Logistics",
+      "invoice_number": "AL-77810",
+      "invoice_date": "2026-09-30",
+      "subtotal": 20020.0,
+      "tax": 2802.8,
+      "total": 22822.8,
+      "line_items": [
+        {
+          "quantity": 1,
+          "unit_price": 220.0,
+          "amount": 220.0
+        },
+        {
+          "quantity": 3,
+          "unit_price": 6500.0,
+          "amount": 19500.0
+        },
+        {
+          "quantity": 4,
+          "unit_price": 75.0,
+          "amount": 300.0
+        }
+      ]
+    }
+  },
+  {
+    "file": "08_clean.png",
+    "category": "clean",
+    "expected_status": "approved",
+    "description": "correct invoice",
+    "truth": {
+      "supplier": "Nour Electrical Supplies",
+      "invoice_number": "NES-2026-118",
+      "invoice_date": "2026-10-16",
+      "subtotal": 22040.0,
+      "tax": 3085.6,
+      "total": 25125.6,
+      "line_items": [
+        {
+          "quantity": 10,
+          "unit_price": 680.0,
+          "amount": 6800.0
+        },
+        {
+          "quantity": 3,
+          "unit_price": 4300.0,
+          "amount": 12900.0
+        },
+        {
+          "quantity": 6,
+          "unit_price": 390.0,
+          "amount": 2340.0
+        }
+      ]
+    }
+  },
+  {
+    "file": "09_line_error.png",
+    "category": "line_error",
+    "expected_status": "needs_review",
+    "description": "line 'Filing Cabinet' overcharged by 1500",
+    "truth": {
+      "supplier": "Pyramid Furniture Trading",
+      "invoice_number": "PFT-88213",
+      "invoice_date": "2026-10-09",
+      "subtotal": 30750.0,
+      "tax": 4305.0,
+      "total": 35055.0,
+      "line_items": [
+        {
+          "quantity": 3,
+          "unit_price": 1150.0,
+          "amount": 4950.0
+        },
+        {
+          "quantity": 3,
+          "unit_price": 5200.0,
+          "amount": 15600.0
+        },
+        {
+          "quantity": 3,
+          "unit_price": 3400.0,
+          "amount": 10200.0
+        }
+      ]
+    }
+  },
+  {
+    "file": "10_line_error.jpg",
+    "category": "line_error",
+    "expected_status": "needs_review",
+    "description": "line 'Window Cleaning' overcharged by 1500",
+    "truth": {
+      "supplier": "Sinai Cleaning Services",
+      "invoice_number": "SCS-4410",
+      "invoice_date": "2026-10-12",
+      "subtotal": 16650.0,
+      "tax": 2331.0,
+      "total": 18981.0,
+      "line_items": [
+        {
+          "quantity": 10,
+          "unit_price": 400.0,
+          "amount": 4000.0
+        },
+        {
+          "quantity": 2,
+          "unit_price": 3200.0,
+          "amount": 6400.0
+        },
+        {
+          "quantity": 5,
+          "unit_price": 950.0,
+          "amount": 6250.0
+        }
+      ]
+    }
+  },
+  {
+    "file": "11_line_error.png",
+    "category": "line_error",
+    "expected_status": "needs_review",
+    "description": "line 'Ink Cartridge - Black' billed for one extra unit",
+    "truth": {
+      "supplier": "Nile Office Supplies Co.",
+      "invoice_number": "INV-2026-0162",
+      "invoice_date": "2026-10-15",
+      "subtotal": 7260.0,
+      "tax": 1016.4,
+      "total": 8276.4,
+      "line_items": [
+        {
+          "quantity": 5,
+          "unit_price": 250.0,
+          "amount": 1250.0
+        },
+        {
+          "quantity": 2,
+          "unit_price": 620.0,
+          "amount": 1860.0
+        },
+        {
+          "quantity": 4,
+          "unit_price": 210.0,
+          "amount": 840.0
+        },
+        {
+          "quantity": 20,
+          "unit_price": 140.0,
+          "amount": 2800.0
+        },
+        {
+          "quantity": 6,
+          "unit_price": 85.0,
+          "amount": 510.0
+        }
+      ]
+    }
+  },
+  {
+    "file": "12_line_error.pdf",
+    "category": "line_error",
+    "expected_status": "needs_review",
+    "description": "line 'USB-C Dock' billed for one extra unit",
+    "truth": {
+      "supplier": "Cairo IT Hardware",
+      "invoice_number": "CIT-2026-3340",
+      "invoice_date": "2026-10-19",
+      "subtotal": 18250.0,
+      "tax": 2555.0,
+      "total": 20805.0,
+      "line_items": [
+        {
+          "quantity": 1,
+          "unit_price": 3100.0,
+          "amount": 6200.0
+        },
+        {
+          "quantity": 5,
+          "unit_price": 450.0,
+          "amount": 2250.0
+        },
+        {
+          "quantity": 1,
+          "unit_price": 9800.0,
+          "amount": 9800.0
+        }
+      ]
+    }
+  },
+  {
+    "file": "13_total_error.png",
+    "category": "total_error",
+    "expected_status": "needs_review",
+    "description": "subtotal inflated by 2,000 vs line items",
+    "truth": {
+      "supplier": "Horus Printing House",
+      "invoice_number": "HPH-5560",
+      "invoice_date": "2026-10-17",
+      "subtotal": 15480.0,
+      "tax": 2167.2,
+      "total": 17647.2,
+      "line_items": [
+        {
+          "quantity": 3,
+          "unit_price": 2900.0,
+          "amount": 8700.0
+        },
+        {
+          "quantity": 2,
+          "unit_price": 1250.0,
+          "amount": 2500.0
+        },
+        {
+          "quantity": 6,
+          "unit_price": 380.0,
+          "amount": 2280.0
+        }
+      ]
+    }
+  },
+  {
+    "file": "14_total_error.jpg",
+    "category": "total_error",
+    "expected_status": "needs_review",
+    "description": "total inflated by 750 vs subtotal + tax",
+    "truth": {
+      "supplier": "Alexandria Packaging Industries",
+      "invoice_number": "API/2026/0902",
+      "invoice_date": "2026-10-18",
+      "subtotal": 3030.0,
+      "tax": 424.2,
+      "total": 4204.2,
+      "line_items": [
+        {
+          "quantity": 1,
+          "unit_price": 540.0,
+          "amount": 540.0
+        },
+        {
+          "quantity": 2,
+          "unit_price": 320.0,
+          "amount": 640.0
+        },
+        {
+          "quantity": 1,
+          "unit_price": 1850.0,
+          "amount": 1850.0
+        }
+      ]
+    }
+  },
+  {
+    "file": "15_total_error.png",
+    "category": "total_error",
+    "expected_status": "needs_review",
+    "description": "total inflated by 750 vs subtotal + tax",
+    "truth": {
+      "supplier": "Aswan Logistics",
+      "invoice_number": "AL-77856",
+      "invoice_date": "2026-10-20",
+      "subtotal": 22010.0,
+      "tax": 3081.4,
+      "total": 25841.4,
+      "line_items": [
+        {
+          "quantity": 8,
+          "unit_price": 220.0,
+          "amount": 1760.0
+        },
+        {
+          "quantity": 3,
+          "unit_price": 6500.0,
+          "amount": 19500.0
+        },
+        {
+          "quantity": 10,
+          "unit_price": 75.0,
+          "amount": 750.0
+        }
+      ]
+    }
+  },
+  {
+    "file": "16_missing_field.png",
+    "category": "missing_field",
+    "expected_status": "needs_review",
+    "description": "invoice number missing",
+    "truth": {
+      "supplier": "Lotus Catering",
+      "invoice_number": "",
+      "invoice_date": "2026-10-21",
+      "subtotal": 2935.0,
+      "tax": 410.9,
+      "total": 3345.9,
+      "line_items": [
+        {
+          "quantity": 12,
+          "unit_price": 120.0,
+          "amount": 1440.0
+        },
+        {
+          "quantity": 5,
+          "unit_price": 185.0,
+          "amount": 925.0
+        },
+        {
+          "quantity": 6,
+          "unit_price": 95.0,
+          "amount": 570.0
+        }
+      ]
+    }
+  },
+  {
+    "file": "17_injection.png",
+    "category": "injection",
+    "expected_status": "needs_review",
+    "description": "line 'Meeting Table' overcharged by 1500",
+    "truth": {
+      "supplier": "Pyramid Furniture Trading",
+      "invoice_number": "PFT-88240",
+      "invoice_date": "2026-10-21",
+      "subtotal": 30050.0,
+      "tax": 4207.0,
+      "total": 34257.0,
+      "line_items": [
+        {
+          "quantity": 1,
+          "unit_price": 2750.0,
+          "amount": 2750.0
+        },
+        {
+          "quantity": 3,
+          "unit_price": 5200.0,
+          "amount": 17100.0
+        },
+        {
+          "quantity": 3,
+          "unit_price": 3400.0,
+          "amount": 10200.0
+        }
+      ]
+    }
+  },
+  {
+    "file": "18_injection.png",
+    "category": "injection",
+    "expected_status": "approved",
+    "description": "prompt injection attempt",
+    "truth": {
+      "supplier": "Delta Tech Solutions",
+      "invoice_number": "DTS-10467",
+      "invoice_date": "2026-10-22",
+      "subtotal": 20350.0,
+      "tax": 2849.0,
+      "total": 23199.0,
+      "line_items": [
+        {
+          "quantity": 3,
+          "unit_price": 450.0,
+          "amount": 1350.0
+        },
+        {
+          "quantity": 2,
+          "unit_price": 8900.0,
+          "amount": 17800.0
+        },
+        {
+          "quantity": 1,
+          "unit_price": 1200.0,
+          "amount": 1200.0
+        }
+      ]
+    }
+  },
+  {
+    "file": "19_duplicate.jpg",
+    "category": "duplicate",
+    "expected_status": "duplicate",
+    "description": "re-sent copy of 01_* in a different format",
+    "truth": {
+      "supplier": "NILE OFFICE SUPPLIES CO",
+      "invoice_number": "INV-2026-0147",
+      "invoice_date": "2026-10-05",
+      "subtotal": 3335.0,
+      "tax": 466.9,
+      "total": 3801.9,
+      "line_items": [
+        {
+          "quantity": 4,
+          "unit_price": 250.0,
+          "amount": 1000.0
+        },
+        {
+          "quantity": 4,
+          "unit_price": 210.0,
+          "amount": 840.0
+        },
+        {
+          "quantity": 3,
+          "unit_price": 85.0,
+          "amount": 255.0
+        },
+        {
+          "quantity": 2,
+          "unit_price": 620.0,
+          "amount": 1240.0
+        }
+      ]
+    }
+  },
+  {
+    "file": "20_duplicate.png",
+    "category": "duplicate",
+    "expected_status": "duplicate",
+    "description": "re-sent copy of 05_* in a different format",
+    "truth": {
+      "supplier": "Cairo IT Hardware",
+      "invoice_number": "CIT-2026-3307",
+      "invoice_date": "2026-10-14",
+      "subtotal": 121500.0,
+      "tax": 17010.0,
+      "total": 138510.0,
+      "line_items": [
+        {
+          "quantity": 2,
+          "unit_price": 450.0,
+          "amount": 900.0
+        },
+        {
+          "quantity": 2,
+          "unit_price": 42500.0,
+          "amount": 85000.0
+        },
+        {
+          "quantity": 2,
+          "unit_price": 3100.0,
+          "amount": 6200.0
+        },
+        {
+          "quantity": 3,
+          "unit_price": 9800.0,
+          "amount": 29400.0
+        }
+      ]
+    }
+  }
+]

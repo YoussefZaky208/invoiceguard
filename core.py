@@ -65,12 +65,29 @@ def get_client():
     return _client
 
 
+class DailyQuotaExceeded(Exception):
+    """The API key has used up today's free allowance; retrying today won't help."""
+
+
+def _rate_limit_wait(error: errors.ClientError) -> float:
+    """How long Google asks us to wait after a 429, in seconds. Raises if it's the daily limit."""
+    text = str(error)
+    if "PerDay" in text:
+        raise DailyQuotaExceeded(
+            "Daily Gemini quota used up for this model. Try again tomorrow or switch GEMINI_MODEL."
+        ) from error
+    match = re.search(r"retryDelay['\"]?\s*:\s*['\"](\d+(?:\.\d+)?)s", text)
+    return min(float(match.group(1)) + 1, 65) if match else 30
+
+
 def extract_invoice(file_bytes: bytes, mime_type: str) -> Invoice:
     """Send the invoice file to Gemini and get back a filled-in Invoice form.
 
-    Retries up to 3 times when Google's servers are busy (5xx errors).
+    Retries when Google is busy (5xx) or asks us to slow down (429 per-minute limit).
+    Stops straight away on the daily limit, since waiting a minute won't fix that.
     """
-    for attempt in range(3):
+    attempts = 4
+    for attempt in range(attempts):
         try:
             response = get_client().models.generate_content(
                 model=MODEL,
@@ -87,9 +104,13 @@ def extract_invoice(file_bytes: bytes, mime_type: str) -> Invoice:
                 return response.parsed
             return Invoice.model_validate_json(response.text)
         except errors.ServerError:
-            if attempt == 2:
+            if attempt == attempts - 1:
                 raise
-            time.sleep(3 * (attempt + 1))  # wait 3s, then 6s, before retrying
+            time.sleep(5 * (attempt + 1))  # wait 5s, 10s, 15s before retrying
+        except errors.ClientError as error:
+            if error.code != 429 or attempt == attempts - 1:
+                raise
+            time.sleep(_rate_limit_wait(error))
 
 
 # ---------- 3. Business rules (plain Python, same answer every time) ----------

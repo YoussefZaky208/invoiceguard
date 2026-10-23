@@ -1,4 +1,4 @@
 .env
 venv/
-invoices.db
+invoices*.db
 __pycache__/
